@@ -1,0 +1,46 @@
+/* h1 {
+    display: flex;
+    width: 621px;
+    height: 207px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #E8E8E8;
+    font-family: Saira Condensed;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+    text-transform: uppercase;
+} */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(70, 120, 186);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/* img {
+    width: 100px;
+    height: 100px;
+} */
+
+.header {
+    color: rgb(70, 120, 186);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

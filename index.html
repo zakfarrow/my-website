@@ -3,25 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: rgb(255, 255, 255)">
-
-    
-    <div class="header">
-        <h1>zak farrow</h1>
-        <ul>
-            <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Web Developer</p>
+            <h1>Hi, I'm <span>Zak Farrow</span><br>from Oxfordshire, UK</h1>
+        </div>
     </div>
 
-    <img src="images/gradpic.png" alt="Male boxer">
+</div>
 
-    <p>Hello! Welcome to my portfolio website. My name is Zak Farrow and I am an aspiring software engineer.</p>
+<!----about---->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/gradpic-removebg-preview.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo quis, odio et reiciendis asperiores
+                    unde, quae neque, doloribus quaerat debitis. Quia error commodi dolorem unde eveniet totam quae necessitatibus?</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>My Python skills</li>
+                        <li><span>HTML/CSS</span><br>My frontend skills</li>
+                        <li><span>JavaScript</span><br>Cool functionality I can implement</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="interests">
+                    <ul>
+                        <li><span>Football</span><br>Playing, watching etc</li>
+                        <li><span>Reading</span><br>Current book: Brave new world</li>
+                        <li><span>Music</span><br>Playing the guitar</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>University of Liverpool</span><br>Mathematics and Computer Science BSc (Joint Honours)</li>
+                        <li><span>Gosford Hill School (Oxfordshire)</span><br>A-levels: Maths, Psychology, Sports Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!------contact------>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo quis, odio et reiciendis asperiores
+                    unde, quae neque, doloribus quaerat debitis</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo quis, odio et reiciendis asperiores
+                    unde, quae neque, doloribus quaerat debitis</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>App design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo quis, odio et reiciendis asperiores
+                    unde, quae neque, doloribus quaerat debitis</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
-<link rel="stylesheet" href="styles.css">
 </html>
